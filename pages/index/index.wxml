@@ -1,3 +1,5 @@
-<view class="section">
-  <cover-image class="background-image" src='../../resources/gouniandaji.png'></cover-image>
+<view class="cover-view">
+  <view class="regards-view">
+    <text class="regards-text">祝你节日快乐</text>
+  </view>
 </view>

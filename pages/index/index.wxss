@@ -1,4 +1,19 @@
+.cover-view {
+  width: 100%;
+  height: 100%;
+}
 .background-image {
   position: absolute;
   height: 100%;
+  text-align: center;
+}
+.regards-view {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  vertical-align: center;
+  justify-content: center;
+}
+.regards-text {
+  vertical-align: middle;
 }
