@@ -1,5 +1,16 @@
-<view class="cover-view">
-  <view class="regards-view">
-    <text class="regards-text">祝你节日快乐</text>
+<!--pages/index/index.wxml-->
+<view class="main">
+  <view class="themes-list-group" wx:for="{{view_data}}" wx:key="id" wx:for-item="theme">
+    <view class="themes-item-box" wx:for="{{theme.items}}" wx:key="title" wx:for-item="content">
+      <view class="item-title">
+        <text>{{theme.theme}}</text>
+      </view>
+      <view class="item-content">
+        <view class="item-content-image-view">
+          <image class="item-content-image" src="" />
+        </view>
+        <text>{{content.title}}</text>
+      </view>
+    </view>
   </view>
 </view>

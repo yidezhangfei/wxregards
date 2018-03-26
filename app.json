@@ -4,6 +4,7 @@
     "downloadFile": 10000
   },
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/page/page"
   ]
 }
