@@ -1,15 +1,17 @@
 <!--pages/index/index.wxml-->
 <view class="main">
   <view class="themes-list-group" wx:for="{{view_data}}" wx:key="id" wx:for-item="theme">
-    <view class="themes-item-box" wx:for="{{theme.items}}" wx:key="title" wx:for-item="content">
+    <view class="themes-item-box">
       <view class="item-title">
-        <text>{{theme.theme}}</text>
+        <text class="theme_title">{{theme.theme}}</text>
       </view>
-      <view class="item-content">
-        <view class="item-content-image-view">
-          <image class="item-content-image" src="" />
+      <view class="themes-item-box-layout" wx:for="{{theme.items}}" wx:key="title" wx:for-item="content">
+        <view class="item-content">
+          <view class="item-content-image-view">
+            <image class="item-content-image" src="" />
+          </view>
+          <text>{{content.title}}</text>
         </view>
-        <text>{{content.title}}</text>
       </view>
     </view>
   </view>
