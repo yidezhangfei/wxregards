@@ -10,16 +10,16 @@ function viewData() {
         "theme": "三月节日",
         "items": [{
           "title": "植树节发财树",
-          "image-url": "",
+          "imageurl": "../../resources/1.jpg",
         }, {
           "title": "二月二龙抬头",
-          "image-url": "",
+          "imageurl": "../../resources/2.jpg",
         }, {
           "title": "春分节气",
-          "image-url": "",
+          "imageurl": "../../resources/3.jpg",
         }, {
           "title": "群友祝福",
-          "image-url": "",
+          "imageurl": "../../resources/4.png",
         }]
       },
       {
@@ -27,19 +27,22 @@ function viewData() {
         "theme": "美好祝福",
         "items": [{
           "title": "一帆风顺",
-          "image-url": ""
+          "imageurl": "../../resources/5.png"
         }, {
           "title": "双倍福气",
-          "image-url": "",
+          "imageurl": "../../resources/6.jpg",
         }, {
           "title": "三阳开泰",
-          "image-url": "",
+          "imageurl": "../../resources/7.jpg",
         }, {
           "title": "四季平安",
-          "image-url": "",
+          "imageurl": "../../resources/8.jpg",
         }, {
           "title": "五福临门",
-          "image-url": "",
+          "imageurl": "../../resources/9.png",
+        }, {
+          "title": "六六大顺",
+          "imageurl": "../../resources/10.jpg",
         }]
       }
     ]
