@@ -1,18 +1,7 @@
 <!--pages/index/index.wxml-->
+<import is="themes" src="../../templates/themes/themes.wxml" />
 <view class="main">
   <view class="themes-list-group" vertical="true" wx:for="{{view_data}}" wx:key="id" wx:for-item="theme">
-    <view class="themes-item-box">
-      <view class="item-title">
-        <text class="theme_title">{{theme.theme}}</text>
-      </view>
-      <block wx:for="{{theme.items}}" wx:key="title" wx:for-item="content">
-          <view class="item-content">
-            <view class="item-content-view">
-              <image class="item-content-image" src="{{content.imageurl}}" mode='aspectFill' />
-              <text>{{content.title}}</text>
-            </view>
-          </view>
-      </block>
-    </view>
+    <template is="themes" data="{{...theme}}" />
   </view>
 </view>
