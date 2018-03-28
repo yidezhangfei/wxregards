@@ -1,7 +1,9 @@
 <template name="themes">
     <view class="themes-item-box">
         <view class="item-title">
+            <image class="besides-title-image" src="../../resources/xiangyun_left.png" mode="aspectFill" />
             <text class="theme-title">{{theme}}</text>
+            <image class="besides-title-image" src='../../resources/xiangyun_right.png' mode='aspectFill' />
         </view>
         <block wx:for="{{items}}" wx:key="" wx:for-item="content">
             <view class="item-content">
