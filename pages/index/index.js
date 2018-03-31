@@ -10,6 +10,18 @@ Page({
     view_data: [],
   },
 
+  click: function(e) {
+    console.log(e)
+    var page_id = e.currentTarget.id;
+    var url = "../items/item?id="+page_id;
+    wx.navigateTo({
+      url: url,
+      fail: function(e) {
+        console.log(e);
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

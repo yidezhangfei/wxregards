@@ -1,0 +1,2 @@
+/* pages/items/item.wxss */
+@import '../../templates/pages/special.wxss'

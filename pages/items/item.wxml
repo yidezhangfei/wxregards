@@ -1,0 +1,3 @@
+<!--pages/items/item.wxml-->
+<import is='{{id}}' src='../../templates/pages/special.wxml' />
+  <template is="{{id}}" data="{{imageUrlArray: imageUrlArray}}"/>

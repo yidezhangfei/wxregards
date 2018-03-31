@@ -1,0 +1,13 @@
+<!--templates/pages/special.wxml-->
+<text>templates/pages/special.wxml</text>
+
+<template name="zhishujiefacaishu">
+  <view class="main">
+    <!-- dahua -->
+    <image class="dahua" src="{{imageUrlArray[1]}}" mode="widthFit" />
+  </view>
+</template>
+
+<template name="eryueerlongtaitou">
+  <text>eryueerlongtaitou</text>
+</template>

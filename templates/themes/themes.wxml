@@ -1,17 +1,17 @@
 <template name="themes">
-    <view class="themes-item-box">
-        <view class="item-title">
-            <image class="besides-title-image" src="../../resources/xiangyun_left.png" mode="aspectFill" />
-            <text class="theme-title">{{theme}}</text>
-            <image class="besides-title-image" src='../../resources/xiangyun_right.png' mode='aspectFill' />
+  <view class="themes-item-box">
+    <view class="item-title">
+      <image class="besides-title-image" src="../../resources/xiangyun_left.png" mode="aspectFill" />
+      <text class="theme-title">{{theme}}</text>
+      <image class="besides-title-image" src='../../resources/xiangyun_right.png' mode='aspectFill' />
+    </view>
+    <block wx:for="{{items}}" wx:key="" wx:for-item="content">
+      <view class="item-content">
+        <view class="item-content-view" id='{{content.id}}' bindtap='click'>
+          <image class="item-content-image" src="{{content.imageurl}}" mode="aspectFill" />
+          <text>{{content.title}}</text>
         </view>
-        <block wx:for="{{items}}" wx:key="" wx:for-item="content">
-            <view class="item-content">
-                <view class="item-content-view">
-                    <image class="item-content-image" src="{{content.imageurl}}" mode="aspectFill" />
-                    <text>{{content.title}}</text>
-                </view>
-            </view>
-        </block>
-    </view>   
+      </view>
+    </block>
+  </view>
 </template>
