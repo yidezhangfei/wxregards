@@ -15,9 +15,11 @@ Page({
     id: "",
     userInfo: {
     },
+    nickName: "",
     templateUrl: ServerUrl + "resource/template/",
     iconUrl: ServerUrl + "resource/icon/",
     bandUrl: ServerUrl + "resource/band/",
+    avatarUrl: "",
     dataString: "",
     imageUrlArray: [],
   },
@@ -34,6 +36,7 @@ Page({
       id: id,
     });
 
+    that.getUserInfo();
     that.SetPageContent(id);
   },
 
@@ -41,8 +44,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    var that = this;
-    that.getUserInfo();
   },
 
   /**
@@ -95,7 +96,10 @@ Page({
       success: function(res) {
         that.setData({
           userInfo: res.userInfo,
+          avatarUrl: res.userInfo.avatarUrl,
+          nickName: res.userInfo.nickName,
         });
+        console.log(that.data.nickName)
         var term = that.data.userInfo.nickName + congratulations;
         wx.setNavigationBarTitle({
           title: term,

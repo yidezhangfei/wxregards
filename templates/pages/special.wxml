@@ -4,7 +4,33 @@
 <template name="zhishujiefacaishu">
   <view class="main">
     <!-- dahua -->
-    <image class="dahua" src="{{imageUrlArray[1]}}" mode="widthFit" />
+    <view class='dahua-view'>
+      <image class="dahua" src="{{imageUrlArray[1]}}" mode="widthFit" />
+    </view>
+
+    <!-- maozi -->
+    <view class="maozi-view">
+      <image class="maozi" mode="widthFix" src="../../resources/maozi/m/1.png"></image>
+    </view>
+    
+    <!-- touxiang -->
+    <view class='touxiang-view'>
+      <image class="userinfo-avatar circle" mode="widthFix" src="{{avatarUrl}}"></image>
+    </view>
+
+   <!-- mingzi -->
+   <view class="userinfo-nickname-view">
+    <text class="userinfo-nickname-before">☆</text>
+    <text class="userinfo-nickname">{{nickName}}</text>
+    <text class='userinfo-nickname-after'>☆</text>
+   </view> 
+
+   <!-- tupian -->
+   <image mode="widthFix" src="{{imageUrlArray[2]}}" />
+
+   <text style="color: green; font-size: 13px">【点击底部生成按钮，立即生成自己的祝福】</text>
+   <text style="color: green; font-size: 13px">【↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ 】</text>
+   
   </view>
 </template>
 
