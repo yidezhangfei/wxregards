@@ -1,0 +1,10 @@
+<!--pages/billboard/billboard.wxml-->
+<view class="main">
+     <swiper class="title-swiper" indicator-dots="{{true}}" autoplay="{{false}}">
+        <block wx:for="{{titleImageArray}}" wx:key="" wx:for-item="imageUrl">
+            <swiper-item>
+                <image class="title-image" src="{{imageUrl}}" mode="scaleToFill" />
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

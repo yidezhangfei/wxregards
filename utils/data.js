@@ -91,6 +91,8 @@ function strIdtoIntId(strId) {
   var idsObject = {
     "zhishujiefacaishu": 1,
     "eryueerlongtaitou": 2,
+    "yurenjiezhufu": 3,
+    "qingmingjiemianhuai": 4,
   };
   intId = idsObject[strId];
   return intId;

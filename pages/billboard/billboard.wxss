@@ -1,0 +1,6 @@
+/* pages/billboard/billboard.wxss */
+.title-image {
+    position: relative;
+    width: 100%;
+    height: 400rpx;
+}

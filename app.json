@@ -5,6 +5,27 @@
   },
   "pages": [
     "pages/index/index",
-    "pages/items/item"
-  ]
+    "pages/items/item",
+    "pages/billboard/billboard"
+  ],
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "resources/Category.png",
+        "selectedIconPath": "resources/Category.png",
+        "text": "选祝福"
+      },
+      {
+        "pagePath": "pages/billboard/billboard",
+        "iconPath": "resources/good.png",
+        "selectedIconPath": "resources/good.png",
+        "text": "英雄榜"
+      }
+    ]
+  }
 }
