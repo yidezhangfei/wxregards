@@ -29,7 +29,6 @@ Page({
     var that = this;
 
     var data = viewData.viewData().list;
-    console.log(data)
     that.setData({
       view_data: data
     })

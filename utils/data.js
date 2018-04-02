@@ -1,13 +1,37 @@
 module.exports = {
   viewData: viewData,
   strIdtoIntId: strIdtoIntId,
+  getTextContentById: getTextContentById,
 }
 
 function viewData() {
   var arr = {
     list: [
       {
-        "id": 1,
+        "id": 3,
+        "theme": "四月节日",
+        "items": [
+          {
+            "id": "yurenjiezhufu",
+            "title": "愚人节祝福",
+            "imageurl": "../../resources/yurenjiezhufu.jpg",
+          }, {
+            "id": "qingmingjiemianhuai",
+            "title": "清明节缅怀",
+            "imageurl": "../../resources/qingmingjiemianhuai.jpg",
+          }, {
+            "id": "guyujieqizhufu",
+            "title": "谷雨节气祝福",
+            "imageurl": "../../resources/guyujieqi.jpg",
+          }, {
+            "id": "chunnuanhuakai",
+            "title": "春暖花开",
+            "imageurl": "../../resources/chunnuanhuakai.jpg",
+          }
+        ]
+      },
+      {
+        "id": 2,
         "theme": "三月节日",
         "items": [{
           "id": "zhishujiefacaishu",
@@ -28,7 +52,7 @@ function viewData() {
         }]
       },
       {
-        "id": 2,
+        "id": 1,
         "theme": "美好祝福",
         "items": [{
           "id": 5,
@@ -70,4 +94,60 @@ function strIdtoIntId(strId) {
   };
   intId = idsObject[strId];
   return intId;
+}
+
+function getTextContentById(id) {
+  var date = new Date();
+  var dateString = date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日";
+  var idsTextContents = {
+    "zhishujiefacaishu": [[{
+      p1: "我亲爱的朋友们",
+      c: "color:#ed1162"
+    }, {
+      p1: "今天是" + dateString,
+      c: "color: #f93c87"
+    }, {
+      p1: "祝各位一路顺风",
+      c: "color: red; background-color: yellow"
+    }, {
+      p1: "每月都幸福",
+      c: "color: #f24f12"
+    }, {
+      p1: "每年都好运",
+      c: "color: yellow"
+    }, {
+      p1: "一生都平安",
+      c: "color: green"
+    }], [{
+      p1: "今天是个一帆风顺的日子",
+      c: "color: red"
+    }, {
+      p1: "为你送上",
+      c: "color: red"
+    }, {
+      p1: "十亿个祝福",
+      c: "color: yellow"
+    }], [{
+      p1: "工作", p2: "帆风顺", c: "color: #fabcc8"
+    }, {
+      p1: "成就", p2: "鸣惊人", c: "color:#1cfafa"
+    }, {
+      p1: "生意", p2: "本万利", c: "color:#ffff47"
+    }, {
+      p1: "事业", p2: "飞冲天", c: "color:#11fa15"
+    }, {
+      p1: "生活", p2: "劳永逸", c: "color:#99f9a1"
+    }, {
+      p1: "人生", p2: "帆风顺", c: "color:#f8a366"
+    }, {
+      p1: "好人", p2: "生平安", c: "color:#d98128"
+    }, {
+      p1: "出门", p2: "日千里", c: "color:red"
+    }, {
+      p1: "工作", p2: "马当先", c: "color:yellow"
+    }, {
+      p1: "旅行", p2: "路顺风", c: "color:#fabcc8"
+    }]],
+  };
+  return idsTextContents[id];
 }

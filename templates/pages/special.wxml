@@ -26,10 +26,51 @@
    </view> 
 
    <!-- tupian -->
-   <image mode="widthFix" src="{{imageUrlArray[2]}}" />
+   <image id="fanchuan" mode="widthFix" src="{{imageUrlArray[2]}}" />
 
-   <text style="color: green; font-size: 13px">【点击底部生成按钮，立即生成自己的祝福】</text>
-   <text style="color: green; font-size: 13px">【↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ 】</text>
+   <text style="color: green; font-size: 16px">【点击底部生成按钮，立即生成自己的祝福】</text>
+   <text style="color: green; font-size: 16px">【↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ 】</text>
+
+   <!-- wenan -->
+   <view class="textArray0">
+    <block wx:for="{{textContentArray[0]}}" wx:key="" wx:for-item="content">
+      <text style="{{content.c}}">{{content.p1}}</text>
+    </block>
+   </view>
+
+   <!-- tupian -->
+   <image id="meinvzhufu" mode="widthFix" src="{{imageUrlArray[3]}}" />
+
+   <!-- wenan -->
+   <view class="textArray1">
+    <block wx:for="{{textContentArray[1]}}" wx:key="" wx:for-item="content">
+      <text style="{{content.c}}">{{content.p1}}</text>
+    </block>
+   </view>
+
+  <!-- wenan -->
+  
+  <block wx:for="{{textContentArray[2]}}" wx:key="" wx:for-item="content">
+   <view class="textArray2">
+      <text style="{{content.c}}">{{content.p1}}</text>
+      <text style="color: Magenta">【亿】</text>
+      <text style="{{content.c}}">{{content.p2}}</text>
+   </view>
+  </block>
+   
+   <!-- tupian -->
+  <image mode="widthFix" src="{{imageUrlArray[4]}}"></image>
+  <image mode="widthFix" src="{{imageBandUrl}}"></image>
+  <image mode="widthFix" src="{{imageUrlArray[5]}}"></image>
+  <image mode="widthFix" src="{{imageBandUrl}}"></image>
+  <image mode="widthFix" src="{{imageUrlArray[6]}}"></image>
+  <image mode="widthFix" src="{{imageUrlArray[7]}}"></image>
+  <image mode="widthFix" src="{{imageUrlArray[8]}}"></image>
+  <image mode="widthFix" src="{{imageUrlArray[9]}}"></image>
+
+  <image mode="widthFix" src="{{imageUrlArray[10]}}"></image>
+
+  <image mode="widthFix" src="{{imageUrlArray[11]}}"></image>
    
   </view>
 </template>

@@ -2,7 +2,7 @@
 const App = getApp();
 const util = require("../../utils/util.js");
 const data = require("../../utils/data.js")
-const ServerUrl = 'http://115.159.28.14/mp_bless/';
+const ServerUrl = 'http://tianjiansoft.club/';
 
 const congratulations = "祝您健康";
 
@@ -16,12 +16,14 @@ Page({
     userInfo: {
     },
     nickName: "",
-    templateUrl: ServerUrl + "resource/template/",
-    iconUrl: ServerUrl + "resource/icon/",
-    bandUrl: ServerUrl + "resource/band/",
+    templateUrl: ServerUrl + "resources/template/",
+    iconUrl: ServerUrl + "resources/icon/",
+    bandUrl: ServerUrl + "resources/band/",
     avatarUrl: "",
     dataString: "",
+    imageBandUrl: "",
     imageUrlArray: [],
+    textContentArray: [],
   },
 
   /**
@@ -114,9 +116,18 @@ Page({
     var that = this;
     var intId = data.strIdtoIntId(id);
     that.SetImageUrl(intId, 9);
+
+    var textContentArray = data.getTextContentById(id);
+    that.setData({
+      textContentArray: textContentArray,
+    });
   },
   SetImageUrl: function(id, count) {
     var that = this;
+    // set band image
+    that.setData({
+      imageBandUrl: that.data.bandUrl + id + ".gif", 
+    });
     var tempImageUrlArray = [];
     for(var i=0; i <= count; i++) {
       var templateUrl = that.data.templateUrl + id.toString() + "/";
