@@ -1,10 +1,31 @@
 <!--pages/billboard/billboard.wxml-->
 <view class="main">
-     <swiper class="title-swiper" indicator-dots="{{true}}" autoplay="{{false}}">
-        <block wx:for="{{titleImageArray}}" wx:key="" wx:for-item="imageUrl">
-            <swiper-item>
-                <image class="title-image" src="{{imageUrl}}" mode="scaleToFill" />
-            </swiper-item>
-        </block>
-    </swiper>
+  <swiper class="title-swiper" indicator-dots="{{true}}" autoplay="{{false}}">
+    <block wx:for="{{titleImageArray}}" wx:key="" wx:for-item="imageUrl">
+      <swiper-item>
+        <image class="title-image" src="{{imageUrl}}" mode="scaleToFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='container'>
+    <view class="split-title-view">
+      <view class="split-title-hr-view-container">
+        <view class='split-title-hr-view'></view>
+      </view>
+      <text class='split-title'>点赞榜分类</text>
+      <view class="split-title-hr-view-container">
+        <view class='split-title-hr-view'></view>
+      </view>
+    </view>
+    <view class="items-container">
+      <block wx:for="{{templateItems}}" wx:key="id">
+        <view class="item-content">
+          <view class="item-content-view">
+            <image class="item-content-image" src="{{item.imageurl}}"></image>
+            <text>{{item.title}}</text>
+          </view>
+        </view> 
+      </block>
+    </view>
+  </view>
 </view>

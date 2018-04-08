@@ -2,88 +2,101 @@ module.exports = {
   viewData: viewData,
   strIdtoIntId: strIdtoIntId,
   getTextContentById: getTextContentById,
+  getTemplateItems: getTemplateItems,
 }
 
-function viewData() {
-  var arr = {
-    list: [
-      {
+var g_arr = {
+  list: [
+    {
+      "id": 3,
+      "theme": "四月节日",
+      "items": [
+        {
+          "id": "yurenjiezhufu",
+          "title": "愚人节祝福",
+          "imageurl": "../../resources/yurenjiezhufu.jpg",
+        }, {
+          "id": "qingmingjiemianhuai",
+          "title": "清明节缅怀",
+          "imageurl": "../../resources/qingmingjiemianhuai.jpg",
+        }, {
+          "id": "guyujieqizhufu",
+          "title": "谷雨节气祝福",
+          "imageurl": "../../resources/guyujieqi.jpg",
+        }, {
+          "id": "chunnuanhuakai",
+          "title": "春暖花开",
+          "imageurl": "../../resources/chunnuanhuakai.jpg",
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "theme": "三月节日",
+      "items": [{
+        "id": "zhishujiefacaishu",
+        "title": "植树节发财树",
+        "imageurl": "../../resources/1.jpg",
+      }, {
+        "id": "eryueerlongtaitou",
+        "title": "二月二龙抬头",
+        "imageurl": "../../resources/2.jpg",
+      }, {
         "id": 3,
-        "theme": "四月节日",
-        "items": [
-          {
-            "id": "yurenjiezhufu",
-            "title": "愚人节祝福",
-            "imageurl": "../../resources/yurenjiezhufu.jpg",
-          }, {
-            "id": "qingmingjiemianhuai",
-            "title": "清明节缅怀",
-            "imageurl": "../../resources/qingmingjiemianhuai.jpg",
-          }, {
-            "id": "guyujieqizhufu",
-            "title": "谷雨节气祝福",
-            "imageurl": "../../resources/guyujieqi.jpg",
-          }, {
-            "id": "chunnuanhuakai",
-            "title": "春暖花开",
-            "imageurl": "../../resources/chunnuanhuakai.jpg",
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "theme": "三月节日",
-        "items": [{
-          "id": "zhishujiefacaishu",
-          "title": "植树节发财树",
-          "imageurl": "../../resources/1.jpg",
-        }, {
-          "id": "eryueerlongtaitou",
-          "title": "二月二龙抬头",
-          "imageurl": "../../resources/2.jpg",
-        }, {
-          "id": 3,
-          "title": "春分节气",
-          "imageurl": "../../resources/3.jpg",
-        }, {
-          "id": 4,
-          "title": "群友祝福",
-          "imageurl": "../../resources/4.png",
-        }]
-      },
-      {
-        "id": 1,
-        "theme": "美好祝福",
-        "items": [{
-          "id": 5,
-          "title": "一帆风顺",
-          "imageurl": "../../resources/5.png"
-        }, {
-          "id": 6,
-          "title": "双倍福气",
-          "imageurl": "../../resources/6.jpg",
-        }, {
-          "id": 7,
-          "title": "三阳开泰",
-          "imageurl": "../../resources/7.jpg",
-        }, {
-          "id": 8,
-          "title": "四季平安",
-          "imageurl": "../../resources/8.jpg",
-        }, {
-          "id": 9,
-          "title": "五福临门",
-          "imageurl": "../../resources/9.png",
-        }, {
-          "id": 10,
-          "title": "六六大顺",
-          "imageurl": "../../resources/10.jpg",
-        }]
-      }
-    ]
-  }
+        "title": "春分节气",
+        "imageurl": "../../resources/3.jpg",
+      }, {
+        "id": 4,
+        "title": "群友祝福",
+        "imageurl": "../../resources/4.png",
+      }]
+    },
+    {
+      "id": 1,
+      "theme": "美好祝福",
+      "items": [{
+        "id": 5,
+        "title": "一帆风顺",
+        "imageurl": "../../resources/5.png"
+      }, {
+        "id": 6,
+        "title": "双倍福气",
+        "imageurl": "../../resources/6.jpg",
+      }, {
+        "id": 7,
+        "title": "三阳开泰",
+        "imageurl": "../../resources/7.jpg",
+      }, {
+        "id": 8,
+        "title": "四季平安",
+        "imageurl": "../../resources/8.jpg",
+      }, {
+        "id": 9,
+        "title": "五福临门",
+        "imageurl": "../../resources/9.png",
+      }, {
+        "id": 10,
+        "title": "六六大顺",
+        "imageurl": "../../resources/10.jpg",
+      }]
+    }
+  ]
+}
 
-  return arr;
+
+function viewData() {
+  return g_arr;
+}
+
+function getTemplateItems() {
+  var list = g_arr.list;
+  var items = [];
+  list.forEach(function(element) {
+    element.items.forEach(function(item) {
+      items.push(item);
+    })
+  })
+  return items;
 }
 
 function strIdtoIntId(strId) {

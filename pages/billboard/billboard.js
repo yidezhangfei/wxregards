@@ -10,6 +10,7 @@ Page({
    */
   data: {
     titleImageArray: [],
+    templateItems: [],
   },
 
   /**
@@ -20,8 +21,12 @@ Page({
     var titleImageArray = [];
     titleImageArray[0] = "../../resources/billboard/yingxiongbang.png";
 
+    var templateItems = data.getTemplateItems();
+    console.log(templateItems);
+
     that.setData({
       titleImageArray: titleImageArray,
+      templateItems: templateItems,
     });
   },
 
