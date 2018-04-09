@@ -4,14 +4,28 @@
 
     $method = $_SERVER['REQUEST_METHOD'];
     $data = "";
+    $database = null;
 
-    function getTemplateItems() {
-        $con = mysqli_connect("localhost", "lijun", "li999888");
-        if (!$con) {
-            echo 'could not connect db: ';
+    function dataBaseConnectAndInit() {
+        $database = mysqli_connect("localhost", "lijun", "li999888");
+        if (!$database) {
+            echo "could not connect db: ";
         }
-        mysqli_select_db($con, "wxregards");
-        $result = mysqli_query($con, "SELECT * FROM templates");
+        $database->set_charset("utf8");
+        $database->select_db("wxregards");
+    }
+
+    function closeDataBase() {
+        if ($database) {
+            $database->close();
+        }
+    }
+
+    function getTemplateItemsOrderByAgreeses() {
+        dataBaseConnectAndInit();
+        $sql = "SELECT * FROM `templates` \n"
+            . "ORDER BY `templates`.`agreeses` ASC";
+        $result = $database->query($sql);
         $result_array = array();
 
         if ($result) {
@@ -21,8 +35,23 @@
             echo json_encode($result_array);
             $result->close();
         }
+        closeDataBase();
+    }
 
-        mysqli_close($con);
+    function getTemplateItemsOrderByDate() {
+        dataBaseConnectAndInit();
+        $sql = "SELECT * FROM `templates` \n"
+            . "ORDER BY `templates`.`added_date` DESC";
+        $result = $database->query($sql);
+        $result_array = array();
+        if ($result) {
+            while($row = $result->fetch_array(MYSQLI_ASSOC)) {
+                $result_array[] = $row;
+            }
+            echo json_encode($result_array);
+            $result->close();
+        }
+        closeDataBase();
     }
 
     if ($method == 'GET') {
@@ -30,7 +59,10 @@
     }
     $function = $_GET['method'];
 
-    if ($function == "getTemplateItems") {
-        getTemplateItems();
+    if ($function == "getTemplateItemsOrderByAgreeses") {
+        getTemplateItemsOrderByAgreeses();
+    }
+    if ($function == "getTemplateItemsOrderByDate") {
+        getTemplateItemsOrderByDate();
     }
 ?>

@@ -21,7 +21,7 @@ Page({
     var titleImageArray = [];
     titleImageArray[0] = "../../resources/billboard/yingxiongbang.png";
 
-    data.getTemplateItems(function(res) {
+    data.getTemplateItemsOrderByAgreeses(function(res) {
       var items = [];
       items = res.data;
       items.forEach(function(element) {

@@ -85,15 +85,12 @@ function viewData() {
   return g_arr;
 }
 
-function getTemplateItems(callback) {
-  /*var list = g_arr.list;
-  var items = [];
-  list.forEach(function(element) {
-    element.items.forEach(function(item) {
-      items.push(item);
-    })
-  })*/
-  getTemplateItemsFromServer(callback);
+function getTemplateItemsOrderByAgreeses(callback) {
+  getTemplateItemsOrderByAgreesesFromServer(callback);
+}
+
+function getTemplateItemsOrderByDate(callback) {
+  getTemplateItemsOrderByDateFromServer(callback);
 }
 
 function strIdtoIntId(strId) {
@@ -164,11 +161,11 @@ function getTextContentById(id) {
   return idsTextContents[id];
 }
 
-function getTemplateItemsFromServer(callback) {
+function getTemplateItemsOrderByAgreesesFromServer(callback) {
   wx.request({
     url: g_ServerUrl + "index.php",
     data: {
-      method: "getTemplateItems",
+      method: "getTemplateItemsOrderByAgreeses",
     },
     dataType: "json",
     success: function(res) {
@@ -177,10 +174,22 @@ function getTemplateItemsFromServer(callback) {
   })
 }
 
+function getTemplateItemsOrderByDateFromServer(callback) {
+  wx.request({
+    url: g_ServerUrl + "index.php",
+    data: {
+      method: "getTemplateItemsOrderByDate",
+    },
+    dataType:"json",
+    success: callback,
+  });
+}
+
 module.exports = {
   viewData: viewData,
   strIdtoIntId: strIdtoIntId,
   getTextContentById: getTextContentById,
-  getTemplateItems: getTemplateItems,
+  getTemplateItemsOrderByAgreeses: getTemplateItemsOrderByAgreeses,
+  getTemplateItemsOrderByDate: getTemplateItemsOrderByDate,
   ServerUrl: g_ServerUrl,
 }
