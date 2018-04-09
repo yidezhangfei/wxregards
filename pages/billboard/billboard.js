@@ -21,12 +21,20 @@ Page({
     var titleImageArray = [];
     titleImageArray[0] = "../../resources/billboard/yingxiongbang.png";
 
-    var templateItems = data.getTemplateItems();
-    console.log(templateItems);
+    data.getTemplateItems(function(res) {
+      var items = [];
+      items = res.data;
+      items.forEach(function(element) {
+        element.imageurl = data.ServerUrl + element.imageurl;
+      })
+      that.setData({
+        templateItems: items,
+      });
+      console.log(that.data.templateItems);
+    });
 
     that.setData({
       titleImageArray: titleImageArray,
-      templateItems: templateItems,
     });
   },
 

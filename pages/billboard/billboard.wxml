@@ -22,7 +22,7 @@
         <view class="item-content">
           <view class="item-content-view">
             <image class="item-content-image" src="{{item.imageurl}}"></image>
-            <text>{{item.title}}</text>
+            <text>{{item.name}}</text>
           </view>
         </view> 
       </block>

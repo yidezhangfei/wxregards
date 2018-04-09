@@ -1,9 +1,4 @@
-module.exports = {
-  viewData: viewData,
-  strIdtoIntId: strIdtoIntId,
-  getTextContentById: getTextContentById,
-  getTemplateItems: getTemplateItems,
-}
+var g_ServerUrl = 'http://tianjiansoft.club/';
 
 var g_arr = {
   list: [
@@ -83,20 +78,22 @@ var g_arr = {
   ]
 }
 
+var g_templateItems = [];
+
 
 function viewData() {
   return g_arr;
 }
 
-function getTemplateItems() {
-  var list = g_arr.list;
+function getTemplateItems(callback) {
+  /*var list = g_arr.list;
   var items = [];
   list.forEach(function(element) {
     element.items.forEach(function(item) {
       items.push(item);
     })
-  })
-  return items;
+  })*/
+  getTemplateItemsFromServer(callback);
 }
 
 function strIdtoIntId(strId) {
@@ -165,4 +162,25 @@ function getTextContentById(id) {
     }]],
   };
   return idsTextContents[id];
+}
+
+function getTemplateItemsFromServer(callback) {
+  wx.request({
+    url: g_ServerUrl + "index.php",
+    data: {
+      method: "getTemplateItems",
+    },
+    dataType: "json",
+    success: function(res) {
+      callback(res);
+    },
+  })
+}
+
+module.exports = {
+  viewData: viewData,
+  strIdtoIntId: strIdtoIntId,
+  getTextContentById: getTextContentById,
+  getTemplateItems: getTemplateItems,
+  ServerUrl: g_ServerUrl,
 }
