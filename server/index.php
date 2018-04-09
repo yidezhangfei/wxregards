@@ -7,6 +7,7 @@
     $database = null;
 
     function dataBaseConnectAndInit() {
+        global $database;
         $database = mysqli_connect("localhost", "lijun", "li999888");
         if (!$database) {
             echo "could not connect db: ";
@@ -16,12 +17,14 @@
     }
 
     function closeDataBase() {
+        global $database;
         if ($database) {
             $database->close();
         }
     }
 
     function getTemplateItemsOrderByAgreeses() {
+        global $database;
         dataBaseConnectAndInit();
         $sql = "SELECT * FROM `templates` \n"
             . "ORDER BY `templates`.`agreeses` ASC";
@@ -39,6 +42,7 @@
     }
 
     function getTemplateItemsOrderByDate() {
+        global $database;
         dataBaseConnectAndInit();
         $sql = "SELECT * FROM `templates` \n"
             . "ORDER BY `templates`.`added_date` DESC";
