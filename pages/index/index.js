@@ -28,10 +28,15 @@ Page({
   onLoad: function (options) {
     var that = this;
 
-    var data = viewData.viewData().list;
+   /* var data = viewData.viewData().list;
     that.setData({
       view_data: data
-    })
+    }) */
+
+    viewData.getTemplateItemsOrderByDate(function(res) {
+      var list = res.data;
+      console.log(list);
+    });
   },
 
   /**
