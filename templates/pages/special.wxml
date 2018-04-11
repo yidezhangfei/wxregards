@@ -78,3 +78,28 @@
 <template name="eryueerlongtaitou">
   <text>eryueerlongtaitou</text>
 </template>
+
+
+<!-- yurenjiezhufu -->
+<template name="yurenjiezhufu">
+  <view class="main" style="background-image: url('../../resources/TB2hphtpcjI8KJjSsppXXXbyVXa_!!1016194477.gif'); background-repeat: repeat-x; height: 200rpx;">
+  </view>
+</template>
+
+
+<!-- qingmingjiemianhuai -->
+<template name="qingmingjiemianhuai">
+  <text>qingmingjiemianhuai</text>
+</template>
+
+
+<!-- guyujieqizhufu -->
+<template name="guyujieqizhufu">
+  <text>guyujieqizhufu</text>
+</template>
+
+
+<!-- chunnuanhuakai -->
+<template name="chunnuanhuakai">
+  <text>chunnuanhuakai</text>
+</template>

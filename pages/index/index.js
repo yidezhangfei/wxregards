@@ -28,11 +28,6 @@ Page({
     onLoad: function(options) {
         var that = this;
 
-        /* var data = viewData.viewData().list;
-         that.setData({
-           view_data: data
-         }) */
-
         viewData.getTemplateItemsOrderByDate(function(res) {
             var list = res.data;
             console.log(list);
@@ -43,7 +38,11 @@ Page({
                 var item = { id: "", title: "", imageurl: "" };
                 item.id = element.name_id;
                 item.title = element.name;
-                item.imageurl = viewData.ServerUrl + element.imageurl;
+                if (element.imageurl.indexOf('htt') == 0) {
+                  item.imageurl = element.imageurl;
+                } else {
+                  item.imageurl = viewData.ServerUrl + element.imageurl;
+                }
                 if (content[0]["theme"] == "") {
                     content[0]["theme"] = theme_temp;
                     content[0]["items"].push(item);

@@ -22,6 +22,7 @@ Page({
     avatarUrl: "",
     dataString: "",
     imageBandUrl: "",
+    backgroundUrl: "",
     imageUrlArray: [],
     textContentArray: [],
   },
