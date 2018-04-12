@@ -116,7 +116,8 @@ Page({
   SetPageContent: function(id) {
     var that = this;
     var intId = data.strIdtoIntId(id);
-    that.SetImageUrl(intId, 9);
+  //  that.SetImageUrl(intId, 9);
+    that.SetImageUrl(id, 9);
 
     var textContentArray = data.getTextContentById(id);
     that.setData({
@@ -125,6 +126,20 @@ Page({
   },
   SetImageUrl: function(id, count) {
     var that = this;
+    // get background image from server
+    data.getTemplateContentImageUrls(function(res) {
+      var list = res.data;
+      console.log(list);
+      var background_url = "";
+      list.forEach(function(element) {
+        if (element['background_image_url']) {
+          background_url = element['background_image_url'];
+        }
+      });
+      that.setData({
+        backgroundUrl: background_url,
+      });
+    }, id);
     // set band image
     that.setData({
       imageBandUrl: that.data.bandUrl + id + ".gif", 

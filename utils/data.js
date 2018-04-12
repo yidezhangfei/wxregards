@@ -91,6 +91,10 @@ function getTemplateItemsOrderByDate(callback) {
     getTemplateItemsOrderByDateFromServer(callback);
 }
 
+function getTemplateContentImageUrls(callback, id) {
+    getTemplateContentImageUrlsFromServer(callback, id);
+}
+
 function strIdtoIntId(strId) {
     var intId = 0;
     var idsObject = {
@@ -207,11 +211,25 @@ function getTemplateItemsOrderByDateFromServer(callback) {
     });
 }
 
+function getTemplateContentImageUrlsFromServer(callback, id) {
+    console.log(id);
+    wx.request({
+        url: g_ServerUrlHttps + "index.php",
+        data: {
+          method: "getTemplateContentImageUrls",
+          name_id: id,
+        },
+        dataType: "json",
+        success: callback,
+    });
+}
+
 module.exports = {
     viewData: viewData,
     strIdtoIntId: strIdtoIntId,
     getTextContentById: getTextContentById,
     getTemplateItemsOrderByAgreeses: getTemplateItemsOrderByAgreeses,
     getTemplateItemsOrderByDate: getTemplateItemsOrderByDate,
+    getTemplateContentImageUrls: getTemplateContentImageUrls,
     ServerUrl: g_ServerUrl,
 }
