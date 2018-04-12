@@ -23,6 +23,7 @@ Page({
     dataString: "",
     imageBandUrl: "",
     backgroundUrl: "",
+    today: "",
     imageUrlArray: [],
     textContentArray: [],
   },
@@ -34,10 +35,14 @@ Page({
     var that = this;
 
     var id = options.id;
+    var date = new Date();
+    var date_string = date.getFullYear() + "年" + date.getMonth() + "月" + date.getDate() + "日";
 
     that.setData({
       id: id,
+      today: date_string,
     });
+    console.log(that.data.today);
 
     that.getUserInfo();
     that.SetPageContent(id);
@@ -131,13 +136,19 @@ Page({
       var list = res.data;
       console.log(list);
       var background_url = "";
+      var image_urls_array = [];
       list.forEach(function(element) {
         if (element['background_image_url']) {
           background_url = element['background_image_url'];
         }
+        if (element['image_url']) {
+          image_urls_array.push(element['image_url']);
+        }
       });
+      console.log(image_urls_array);
       that.setData({
         backgroundUrl: background_url,
+        imageUrlArray: image_urls_array,
       });
     }, id);
     // set band image

@@ -1,0 +1,9 @@
+.tiaodai_yurenjie_view {
+    width: 100%;
+    height: auto;
+}
+.tiaodai_yurenjie_image {
+    position: relative;
+    width: 100%;
+    height: 80rpx;
+}

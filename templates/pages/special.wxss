@@ -1,4 +1,5 @@
 /* templates/pages/special.wxss */
+@import 'yurenjiezhufu.wxss';
 .main {
   position: absolute;
   display: flex;

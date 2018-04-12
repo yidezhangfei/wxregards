@@ -1,6 +1,6 @@
 <!--pages/items/item.wxml-->
 <import is='{{id}}' src='../../templates/pages/special.wxml' />
-<template is="{{id}}" data="{{avatarUrl, imageUrlArray, nickName, textContentArray, imageBandUrl, backgroundUrl}}"/>
+<template is="{{id}}" data="{{avatarUrl, imageUrlArray, nickName, textContentArray, imageBandUrl, backgroundUrl, today}}"/>
 <view class="share-view">
   <button class='share-button' size='default' type='primary' open-type='share'>把祝福分享给好友</button>
 </view>

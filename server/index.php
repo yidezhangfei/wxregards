@@ -62,17 +62,28 @@
         global $database;
         dataBaseConnectAndInit();
         $sql_get_background = "SELECT `background_image_url` FROM `template_content` WHERE `name_id` = '$name_id'";
+        $sql_get_image_urls = "SELECT `image_url` FROM `image_urls` WHERE `own_by_template`='$name_id'";
         $result = $database->query($sql_get_background);
+        $result_image_urls = $database->query($sql_get_image_urls);
         $result_array = array();
+        $result_image_urls_array = array();
         if ($result) {
             while($row = $result->fetch_array(MYSQLI_ASSOC)) {
                 $result_array[] = $row;
             }
-            echo json_encode($result_array);
             $result->close();
         } else {
             echo "query result null";
         }
+        if ($result_image_urls) {
+            while($row = $result_image_urls->fetch_array(MYSQLI_ASSOC)) {
+                $result_image_urls_array[] = $row;
+            }
+            $result_image_urls->close();
+        } else {
+            echo "query image urls null";
+        }
+        echo json_encode(array_merge($result_image_urls_array, $result_array));
         closeDataBase();
     }
 

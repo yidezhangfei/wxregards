@@ -82,7 +82,12 @@
 
 <!-- yurenjiezhufu -->
 <template name="yurenjiezhufu">
-  <view class="main" style="background-image: url('{{backgroundUrl}}'); background-repeat: repeat-x repeat-y; height: 100%;">
+  <view class="main" style=" height: 100%;">
+    <!-- tiaodai -->
+    <view class="tiaodai_yurenjie_view">
+      <image class="tiaodai_yurenjie_image" src="{{imageUrlArray[3]}}" mode="widthFit"></image>
+    </view>
+    <text class="tiaodai_text" style="font-size:12px; color: #00FF00;">※今天{{today}} 愚人节快乐!</text>
   </view>
 </template>
 
