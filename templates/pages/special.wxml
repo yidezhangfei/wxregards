@@ -87,7 +87,24 @@
     <view class="tiaodai_yurenjie_view">
       <image class="tiaodai_yurenjie_image" src="{{imageUrlArray[3]}}" mode="widthFit"></image>
     </view>
-    <text class="tiaodai_text" style="font-size:12px; color: #00FF00;">※今天{{today}} 愚人节快乐!</text>
+    <text class="tiaodai_yurenjie_text" style="font-size:12px; color: #00FF00;">※今天{{today}} 愚人节快乐!</text>
+
+    <!-- maozi -->
+    <view class="maozi-view">
+      <image class="maozi" mode="widthFix" src="../../resources/maozi/m/1.png"/>
+    </view>
+
+    <!-- touxiang -->
+    <view class="touxiang-view">
+      <image class="userinfo-avatar circle" mode="widthFix" src="{{avatarUrl}}"/>
+    </view>
+    
+    <!-- mingzi -->
+    <view class="userinfo-nickname-view">
+      <text class="userinfo-nickname-before">☆</text>
+      <text class="userinfo-nickname">{{nickName}}</text>
+      <text class="userinfo-nickname-after">☆</text>
+    </view>
   </view>
 </template>
 
