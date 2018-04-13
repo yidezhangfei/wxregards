@@ -82,7 +82,7 @@
 
 <!-- yurenjiezhufu -->
 <template name="yurenjiezhufu">
-  <view class="main" style=" height: 100%;">
+  <view class="main" style=" height: 100%;background-image:url({{backgroundUrl}});repeat:repeat-x repeat-y">
     <!-- tiaodai -->
     <view class="tiaodai_yurenjie_view">
       <image class="tiaodai_yurenjie_image" src="{{imageUrlArray[3]}}" mode="widthFit"></image>
@@ -124,4 +124,35 @@
 <!-- chunnuanhuakai -->
 <template name="chunnuanhuakai">
   <text>chunnuanhuakai</text>
+</template>
+
+
+<!-- shuangbeizhufu -->
+<template name="shuangbeifuqi">
+  <view class="main" style="height: 100%;background-image:url({{backgroundUrl}});repeat:repeat-x repeat-y">
+    <!-- tiaodai -->
+    <view class="tiaodai_shuangbeifuqi_view">
+      <image class="tiaodai_shuangbeifuqi_image" src="{{imageUrlArray[7]}}" mode="widthFix" />
+    </view>
+
+    <!-- maozi -->
+    <view class="maozi_shuangbeifuqi_view">
+      <image class="maozi" mode="widthFix" src="../../resources/maozi/m/1.png"/>
+    </view>
+
+    <!-- touxiang -->
+    <view class="touxiang_shuangbeifuqi_view">
+      <image class="userinfo-avatar circle" mode="widthFix" src="{{avatarUrl}}"/>
+    </view>
+    
+    <!-- mingzi -->
+    <view class="userinfo-nickname-view">
+      <text class="userinfo-nickname-before">☆</text>
+      <text class="userinfo-nickname">{{nickName}}</text>
+      <text class="userinfo-nickname-after">☆</text>
+    </view>
+
+    <!-- tupian -->
+    <image id="fuzi" src="{{imageUrlArray[10]}}" mode="widthFix" />
+  </view>
 </template>
