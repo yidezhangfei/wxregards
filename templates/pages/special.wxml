@@ -191,11 +191,80 @@
         </view>
       </block>
     </view>
-
+    
     <!-- wenan4 -->
     <view class="textArray3_shuangbeifuqi_view">
       <image class='userinfo-avatar circle small' src="{{avatarUrl}}" mode='widthFix'/>
       <text style='color: limegreen;font-weight: bold; font-size: 22px; margin-right: 2%'>—— {{nickName}}</text>
+    </view>
+
+  </view>
+</template>
+
+<!-- sanyangkaitai -->
+<template name="sanyangkaitai">
+  <view class="main" style="background-image:url({{backgroundUrl}});repeat:repeat-x repeat-y">
+    <!-- tiaodai -->
+    <view class="tiaodai_sanyangkaitai_view">
+      <image class="tiaodai_sanyangkaitai_image" src="{{imageUrlArray[0]}}" mode="widthFix" />
+    </view>
+
+    <!-- maozi -->
+    <image class="maozi_sanyangkaitai_image" mode="widthFix" src="../../resources/maozi/m/1.png"/>
+
+    <!-- touxiang -->
+    <image class="userinfo-avatar circle" mode="widthFix" src="{{avatarUrl}}"/>
+    
+    <!-- mingzi -->
+    <view class="userinfo-nickname-view">
+      <text class="userinfo-nickname-before">☆</text>
+      <text class="userinfo-nickname">{{nickName}}</text>
+      <text class="userinfo-nickname-after">☆</text>
+    </view>
+
+    <text style="color: green; font-size: 16px">【点击底部生成按钮，立即生成自己的祝福】</text>
+    <text style="color: green; font-size: 16px">【↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ 】</text>
+
+    <!-- wenan -->
+    <view class="textArray0">
+      <block wx:for="{{textContentArray[0]}}" wx:key="" wx:for-item="content">
+        <text style="{{content.c[0]}}">{{content.p1}}</text>
+      </block>
+    </view>
+
+    <!-- tupian -->
+    <image class="yuanbao_sanyangkaitai_image" src="{{imageUrlArray[2]}}" mode="widthFix"></image>
+
+    <!-- wenan2 -->
+    <view class="textArray1">
+      <block wx:for="{{textContentArray[1]}}" wx:key="" wx:for-item="content">
+        <text style="{{content.c[0]}}">{{content.p1}}</text>
+      </block>
+    </view>
+
+    <!-- tupian -->
+    <image class="yuanbao_sanyangkaitai_image" src="{{imageUrlArray[3]}}" mode="widthFix"></image>
+
+    <!-- wenan3 -->
+    <view class="textArray1">
+      <block wx:for="{{textContentArray[2]}}" wx:key="" wx:for-item="content">
+        <text style="{{content.c[0]}}">{{content.p1}}</text>
+      </block>
+    </view>
+
+    <!-- tupian -->
+    <image src="{{imageUrlArray[1]}}" mode="widthFix"></image>
+    <image src="{{imageUrlArray[3]}}" mode="widthFix"></image>
+
+    <!-- wenan3 -->
+    <view class="textArray2_sanyangkaitai_view">
+      <block wx:for='{{textContentArray[3]}}' wx:key="" wx:for-item="content">
+        <view class="textArray2_sanyangkaitai_inline_view">
+          <block wx:for="{{content.p}}" wx:key="" wx:for-item="item" wx:for-index="index">
+            <text style="{{content.c[index]}}">{{item}}</text>
+          </block>
+        </view>
+      </block>
     </view>
 
   </view>

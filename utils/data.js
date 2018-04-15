@@ -1,6 +1,7 @@
 var g_ServerUrl = 'http://tianjiansoft.club/';
 var g_ServerUrlHttps = 'https://tianjiansoft.club/';
 const shuangbeifuqi = require('shuangbeifuqi.js')
+const sanyangkaitai = require('sanyangkaitai.js')
 
 var g_arr = {
     list: [{
@@ -112,6 +113,8 @@ function getTextContentById(id) {
     var idsTextContents = [];
     if (id == 'shuangbeifuqi') {
         idsTextContents = shuangbeifuqi.textArray;
+    } else if (id == 'sanyangkaitai') {
+      idsTextContents = sanyangkaitai.textArray;
     }
     
     return idsTextContents;

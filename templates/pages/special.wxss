@@ -1,6 +1,8 @@
 /* templates/pages/special.wxss */
 @import 'yurenjiezhufu.wxss';
 @import 'shuangbeifuqi.wxss';
+@import 'sanyangkaitai.wxss';
+
 .main {
   position: absolute;
   display: flex;
@@ -110,7 +112,6 @@
   font-size: 20px;
   font-weight: bold;
 }
-
 .small {
   width: 10%;
 }
