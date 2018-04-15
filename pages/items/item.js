@@ -128,6 +128,7 @@ Page({
     that.setData({
       textContentArray: textContentArray,
     });
+    console.log(that.data.textContentArray[0]);
   },
   SetImageUrl: function(id, count) {
     var that = this;
