@@ -125,10 +125,11 @@ Page({
     that.SetImageUrl(id, 9);
 
     var textContentArray = data.getTextContentById(id);
+    console.log(textContentArray);
     that.setData({
       textContentArray: textContentArray,
     });
-    console.log(that.data.textContentArray[0]);
+    console.log(that.data.textContentArray[3][0]);
   },
   SetImageUrl: function(id, count) {
     var that = this;

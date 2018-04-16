@@ -48,3 +48,24 @@
     display: flex;
     flex-direction: row-reverse;
 }
+
+.textArray4_shuangbeifuqi_view {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.textArray4_shuangbeifuqi_inline_view {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.textArray4_shuangbeifuqi_inline_text {
+    font-size: 12px;
+}
+
+.tileimage_shuangbeifuqi {
+    position: relative;
+    width: 100%;
+    margin-top: 30%;
+}

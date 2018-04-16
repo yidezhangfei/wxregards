@@ -198,6 +198,39 @@
       <text style='color: limegreen;font-weight: bold; font-size: 22px; margin-right: 2%'>—— {{nickName}}</text>
     </view>
 
+    <!-- wenan5 -->
+    <view class="textArray4_shuangbeifuqi_view">
+      <block wx:for="{{textContentArray[3]}}" wx:key="" wx:for-item="content">
+        <view class="textArray4_shangbeifuqi_inline_view">
+          <block wx:for="{{content.p}}" wx:key="" wx:for-item="item" wx:for-index="index">
+            <text class="textArray4_shuangbeifuqi_inline_text" style="{{content.c[index]}}">{{item}}</text>
+          </block>
+        </view>
+      </block>
+    </view>
+
+    <!-- 生成按钮 -->
+    <view class="generate_view">
+      <button class="generate_button" type="primary" size="default">点击生成自己的祝福</button>
+    </view>
+
+    <!-- wenan6 -->
+    <view class="textArray4_shuangbeifuqi_view">
+      <block wx:for="{{textContentArray[4]}}" wx:key="" wx:for-item="content">
+        <view class="textArray4_shangbeifuqi_inline_view">
+          <block wx:for="{{content.p}}" wx:key="" wx:for-item="item" wx:for-index="index">
+            <text class="textArray4_shuangbeifuqi_inline_text" style="{{content.c[index]}}">{{item}}</text>
+          </block>
+        </view>
+      </block>
+    </view>
+
+    <!-- xingxingband -->
+    <image class="xingxingband_image" src="{{imageUrlArray[11]}}" mode="widthFix"/>
+
+    <!-- tileimage -->
+    <image class="tileimage_shuangbeifuqi" src="{{imageUrlArray[12]}}" mode="widthFix"/>
+
   </view>
 </template>
 

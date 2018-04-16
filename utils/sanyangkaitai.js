@@ -81,25 +81,25 @@ var textArray = [
       c: ['color: #FFB3FF; margin-top: 3%; margin-bottom: 3%;'],
     }],
     [{
-      p: ['\u039f', '此祝福内涵魅力', '\u039f'],
+      p: ['\u25cf', '此祝福内涵魅力', '\u25cf'],
       c: ['color: red;margin-top: 1%; margin-bottom: 1%', 'color: limegreen; margin-top: 1%; margin-bottom: 1%', 'color: green; margin-top: 1%; margin-bottom: 1%'],
     }, {
-      p: ['健康\u039f', '活泼', '青春力'],
+      p: ['健康\u25cf', '活泼', '青春力'],
       c: ['color: red; font-size: 23px; margin-top: 1%; margin-bottom: 1%', 'color: limegreen; margin-top: 1%; margin-bottom: 1%', 'color: yellow; margin-top: 1%; margin-bottom: 1%'],
     }, {
-      p: ['好运\u039f', '吉祥', '幸福力'],
+      p: ['好运\u25cf', '吉祥', '幸福力'],
       c: ['color: blue; font-size: 23px; margin-top: 1%; margin-bottom: 1%', 'color: limegreen; margin-top: 1%; margin-bottom: 1%', 'color: turquoise; margin-top: 1%; margin-bottom: 1%']
     }, {
-      p: ['幽默\u039f', '搞笑', '感染力'],
+      p: ['幽默\u25cf', '搞笑', '感染力'],
       c: ['color: yellow; font-size: 23px; margin-top: 1%; margin-bottom: 1%', 'color: limegreen; margin-top: 1%; margin-bottom: 1%', 'color: yellow; margin-top: 1%; margin-bottom: 1%']
     }, {
-      p: ['\u039f', '祝收到的朋友在2018年', '\u039f'],
+      p: ['\u25cf', '祝收到的朋友在2018年', '\u25cf'],
       c: ['color: #E63F00; margin-right: 1%; margin-top: 1%; margin-bottom: 1%', 'color: #E63F00; margin-top: 1%; margin-bottom: 1%', 'color: yellow; margin-top: 1%; margin-bottom: 1%']
     }, {
-      p: ['\u039f', '拥有运气财气好福气', '\u039f'],
+      p: ['\u25cf', '拥有运气财气好福气', '\u25cf'],
       c: ['color: #E63F00; margin-top: 1%; margin-bottom: 1%', 'color: aqua; margin-top: 1%; margin-bottom: 1%', 'color: yellow; margin-top: 1%; margin-bottom: 1%']
     }, {
-      p: ['\u039f', '双倍福气送给你', '\u039f'],
+      p: ['\u25cf', '双倍福气送给你', '\u25cf'],
       c: ['color: #E63F00; margin-top: 1%; margin-bottom: 1%', 'color: #FF44AA; margin-top: 1%; margin-bottom: 1%', 'color: yellow; margin-top: 1%; margin-bottom: 1%']
     }]
 ];
